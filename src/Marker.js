@@ -66,7 +66,7 @@ class Marker extends React.Component {
             }
         )
         .catch(err => this.setState({text: "Sorry, could not load tip from Foursquare"}));
-/*
+        
         foursquare.getDetail(this.props.position.lat, this.props.position.lng)
             .then(data => {
                 let loc = data.venues[0].location.formattedAddress;
@@ -77,7 +77,6 @@ class Marker extends React.Component {
                     address: "Sorry, could not load address from Foursquare"
                 })
             );
-            */
     }
 
     render() {
