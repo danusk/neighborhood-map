@@ -13,7 +13,7 @@ A single-page application using React featuring a map of my neighborhood with ma
 
 ### Launching the App in the Browser
 
-* Visit https://danusk.github.io/fend-map/
+* Visit https://danusk.github.io/neighborhood-map/
 
 ### Built With:
 
