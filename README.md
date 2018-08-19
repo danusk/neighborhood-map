@@ -25,6 +25,7 @@ A single-page application using React featuring a map of my neighborhood with ma
 * [leaflet-bounce-maker](https://github.com/maximeh/leaflet.bouncemarker)
 * [open street map](https://www.openstreetmap.org)
 * [gh-pages](https://github.com/tschaub/gh-pages)
+* [fontawesome](https://fontawesome.com/)
 
 
 
