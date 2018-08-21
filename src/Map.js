@@ -10,7 +10,8 @@ import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 class Map extends React.Component {
     state = {
         map: "",
-        locations: loc.locations
+        locations: loc.locations,
+        mapErr: false
     };
 
     componentDidMount() {
@@ -28,9 +29,20 @@ class Map extends React.Component {
                 maxZoom: 18,
                 id: 'mapbox.streets',
                 accessToken: 'pk.eyJ1IjoiZGFudXNrIiwiYSI6ImNqa2lpbXFqazEzeXoza3FnM3IxdDBweHAifQ.Mj0t4kPh8FMDyQknHzOl0g'
+            }).on('tileerror', (err) => {
+                this.mapError();
             })]
         });
         this.setState({ map: map });
+    }
+
+    // map loading errors are handled on a tileerror event:
+    // https://leafletjs.com/reference-1.3.4.html#tileerrorevent
+    mapError = () => {
+        if (!this.state.mapErr) {
+            this.setState({mapErr: true})
+            alert("Map failed to load")
+        }
     }
 
     getMarkers = () => {
